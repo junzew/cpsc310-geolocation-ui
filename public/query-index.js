@@ -15,5 +15,12 @@
 //       use AJAX to get lat/long. Then update Google map's iframe and show result in the #result-message
 document.getElementById('query-button').addEventListener('click', function() {
     let query = buildQuery();
-    console.log(query);
+    
+    sendQuery(query)
+        .then(function(result) {
+            console.log(result);
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
 });
