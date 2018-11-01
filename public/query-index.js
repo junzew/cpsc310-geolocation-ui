@@ -15,12 +15,15 @@
 //       use AJAX to get lat/long. Then update Google map's iframe and show result in the #result-message
 document.getElementById('query-button').addEventListener('click', function() {
     let query = buildQuery();
-    
+    let mapIframe = document.getElementById('map-iframe');
+    let resultMessage = document.getElementById('result-message');
+
     sendQuery(query)
         .then(function(result) {
-            console.log(result);
+            mapIframe.src =
+                "http://www.openlinkmap.org/small.php?lat=" + result.lat + "&lon=" + result.lon + "&zoom=18";
         })
         .catch(function(error) {
-            console.log(error);
+            resultMessage.innerText = error;
         });
 });
