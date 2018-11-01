@@ -10,7 +10,8 @@
 function buildQuery() {
     let query = '';
     
-    // TODO: assign the value of textarea to query, make sure it is URL-encoded
+    let textarea = document.getElementById('address-textarea');
+    query = escape(textarea.value);
 
     return query;
 };
