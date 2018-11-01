@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>Address Explorer</title>
+    <link href="bundle.css" rel="stylesheet" />
+</head>
+<body class="bootstrap">
+    <div id="wrapper">
+        <div id="nav-container">
+            <div class="logo">AddressExplorer</div>
+            <nav class="nav">
+                <a class="nav-item tab" data-type="plain" href="#tab-plain">Plain</a>
+                    <a class="nav-item tab active" data-type="courses" href="#tab-courses">Address</a>
+            </nav>
+        </div>
+
+        <div id="content-container">
+            <div id="left-container">
+                <div id="form-container">
+                    <div class="tab-panel active" id="tab-plain" data-type="plain">
+                        <form data-type="plain">
+                            <div class="form-group plain">
+                                <legend>Input Address here</legend>
+                                <textarea id="address-textarea" class="form-control code" rows="3" cols="64"></textarea>
+                            </div>
+                            <div class="form-group plain">
+                                <legend>Here are some examples</legend>
+                                <ol>
+                                    <li>6245 Agronomy Road V6T 1Z4</li>
+                                </ol>
+                            </div>
+                        </form>                
+                    </div>
+                    <div id="submit-container">
+                        <a id="query-button" class="btn" href="#">Query</a>
+                    </div>
+                </div>
+            </div>
+            <div id="right-container">
+                <div id="result-container">
+                    <p id="result-message"></p>
+                    <iframe id="map-iframe" width="420" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border: 1px solid black;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="query-builder.js"></script>
+    <script type="text/javascript" src="query-sender.js"></script>
+    <script type="text/javascript" src="query-index.js"></script>
+</body>
+</html>
