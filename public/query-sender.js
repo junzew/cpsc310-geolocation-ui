@@ -6,9 +6,18 @@
  */
 function sendQuery(query) {
     return new Promise(function(fulfill, reject) {
-        // TODO: provided a query string, make a request to 
-        //       'http://cs310.ugrad.cs.ubc.ca:11316/api/v1/project_310/<address>'
-        //       fulfill({lat: , lon: }) when no error
-        //       otherwise, reject() with the error message
+        var request = new XMLHttpRequest();
+        request.open('GET', 'http://cs310.ugrad.cs.ubc.ca:11316/api/v1/project_310/' + query, true);
+
+        request.onload = function() {
+            var result = JSON.parse(request.responseText);
+            fulfill(result);
+        };
+
+        request.onerror = function() {
+            reject('The request failed')
+        }
+
+        request.send();
     });
 };
