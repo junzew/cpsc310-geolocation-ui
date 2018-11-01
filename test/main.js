@@ -28,4 +28,14 @@ describe('Campus Explorer - ', function() {
       let resultMessage = _document.getElementById('result-message');
       expect(resultMessage.innerText).to.equal('');
     });
+
+  it('The map should show "6245 Agronomy Road V6T 1Z4" successfully', async function() {
+      var _document = karmaHTML.index.document;
+      _document.getElementById('address-textarea').value = "6245 Agronomy Road V6T 1Z4";
+      await wait(this.UI_DELAY);
+      _document.getElementById('query-button').click();
+      await wait(3000);
+      let mapIframe = _document.getElementById('map-iframe');
+      expect(mapIframe.src).to.equal('http://www.openlinkmap.org/small.php?lat=49.26125&lon=-123.24807&zoom=18');
+    });
 });
