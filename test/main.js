@@ -11,7 +11,9 @@ describe('Campus Explorer - ', function() {
     karmaHTML.index.onstatechange = function(ready) {
       //if the #Document is ready, fire tests
       //the done() callback is the jasmine native async-support function
-      if (ready) done();
+      if (ready) {
+        setTimeout(done, 500);
+      }
     };
     karmaHTML.index.reload();
   });
