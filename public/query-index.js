@@ -22,8 +22,10 @@ document.getElementById('query-button').addEventListener('click', function() {
         .then(function(result) {
             mapIframe.src =
                 "http://www.openlinkmap.org/small.php?lat=" + result.lat + "&lon=" + result.lon + "&zoom=18";
+            mapIframe.style.visibility = 'visible';
         })
         .catch(function(error) {
             resultMessage.innerText = error;
+            mapIframe.style.visibility = 'hidden';
         });
 });

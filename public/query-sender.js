@@ -11,7 +11,11 @@ function sendQuery(query) {
 
         request.onload = function() {
             var result = JSON.parse(request.responseText);
-            fulfill(result);
+            if ('error' in result) {
+                reject(result.error);
+            } else {
+                fulfill(result);
+            }
         };
 
         request.onerror = function() {
