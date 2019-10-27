@@ -11,5 +11,7 @@
 // example openstreetmap url
 // http://www.openlinkmap.org/small.php?lat=49.26125&lon=-123.24807&zoom=18
 
-// TODO: listen to "query" button click, and when it is clicked, extract query string and 
-//       use AJAX to get lat/long. Then update Google map's iframe and show result in the #result-message
+// documentation: https://wiki.openstreetmap.org/wiki/OpenLinkMap#Embed_map_in_another_website
+
+// TODO: listen to "query" button click, and when it is clicked, extract query string and
+//       use AJAX to get lat/long. Then update the map's iframe and show result in the #result-message
