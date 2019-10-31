@@ -6,9 +6,9 @@
  */
 function sendQuery(query) {
     return new Promise(function(fulfill, reject) {
-        // TODO: provided a query string, make a request to 
-        //       'http://cs310.ugrad.cs.ubc.ca:11316/api/v1/project_310/<address>'
+        // TODO: provided a query string, make a request to
+        //       'http://cs310.students.cs.ubc.ca:11316/api/v1/project_team<TEAM NUMBER>/<ADDRESS>'
         //       fulfill({lat: , lon: }) when no error
         //       otherwise, reject() with the error message
     });
-};
+}
