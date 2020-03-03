@@ -7,8 +7,7 @@
 function sendQuery(query) {
     return new Promise(function(fulfill, reject) {
         var request = new XMLHttpRequest();
-        request.open('GET', 'http://cs310.ugrad.cs.ubc.ca:11316/api/v1/project_310/' + query, true);
-
+        request.open('GET', 'http://cs310.students.cs.ubc.ca:11316/api/v1/project_310/' + query, true);
         request.onload = function() {
             var result = JSON.parse(request.responseText);
             if ('error' in result) {
