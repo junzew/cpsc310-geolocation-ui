@@ -2,6 +2,7 @@
 
 ## Goal
 Given an address of a UBC building, display its location on a map
+![Alt Text](demo.gif)
 
 ## Set up
 `git clone` this repository
