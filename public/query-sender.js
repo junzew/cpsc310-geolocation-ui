@@ -6,10 +6,10 @@
  */
 function sendQuery(query) {
     return new Promise(function(fulfill, reject) {
-        var request = new XMLHttpRequest();
+        let request = new XMLHttpRequest();
         request.open('GET', 'http://cs310.students.cs.ubc.ca:11316/api/v1/project_310/' + query, true);
         request.onload = function() {
-            var result = JSON.parse(request.responseText);
+            let result = JSON.parse(request.responseText);
             if ('error' in result) {
                 reject(result.error);
             } else {
@@ -19,8 +19,8 @@ function sendQuery(query) {
 
         request.onerror = function() {
             reject('The request failed')
-        }
+        };
 
         request.send();
     });
-};
+}
