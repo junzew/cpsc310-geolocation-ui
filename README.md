@@ -20,6 +20,11 @@ Implement the javascript files under the `public` folder:
 Specific TODOs can be found in each file.
 
 ## APIs we will use
-* Finding geolocation of building: `http://cs310.students.cs.ubc.ca:11316/api/v1/project_team<TEAM NUMBER>/<ADDRESS>`
+* Finding geolocation (lat/lon) of building: 
+
+```http://cs310.students.cs.ubc.ca:11316/api/v1/project_team<TEAM NUMBER>/<ADDRESS>```
 
 * Display location on map: [openstreetmap API](https://wiki.openstreetmap.org/wiki/OpenLinkMap#Embed_map_in_another_website)
+
+ Example: 
+ ```http://www.openlinkmap.org/small.php?lat=49.26125&lon=-123.24807&zoom=18```

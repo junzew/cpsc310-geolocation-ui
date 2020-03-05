@@ -1,5 +1,5 @@
 /**
- * Receives a query object as parameter and sends it as Ajax request to the POST /query REST endpoint.
+ * Receives a query object as parameter and sends it as Ajax request.
  *
  * @param query The query object
  * @returns {Promise} Promise that must be fulfilled if the Ajax request is successful and be rejected otherwise.
